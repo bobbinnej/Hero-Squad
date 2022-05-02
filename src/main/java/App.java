@@ -16,6 +16,11 @@ public class App {
           return new ModelAndView(model, "landing-page.hbs");
               }, new HandlebarsTemplateEngine() );
 
+      get("/hero-form", (request,respond)->{
+        Map<String, Object>model= new HashMap<>();
+        return new ModelAndView(model, "hero-form.hbs");
+      },new HandlebarsTemplateEngine());
+
 
     }
 
