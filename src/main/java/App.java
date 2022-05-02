@@ -1,5 +1,8 @@
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
+
+import models.Hero;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import static spark.Spark.*;
@@ -20,6 +23,14 @@ public class App {
         Map<String, Object>model= new HashMap<>();
         return new ModelAndView(model, "hero-form.hbs");
       },new HandlebarsTemplateEngine());
+
+      get("/hero", (request,respond)->{
+          Map<String,Object>model=new HashMap<>();
+          ArrayList<Hero> hero = Hero.getAllInstances();
+          model.put("hero", hero);
+          return new ModelAndView(model, "hero.hbs");
+      },  new HandlebarsTemplateEngine());
+
 
 
     }
