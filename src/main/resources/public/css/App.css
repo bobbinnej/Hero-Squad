@@ -1,0 +1,139 @@
+.index{
+background: url(/images/back1.gif)no-repeat center center fixed;
+background-size: cover;
+
+}
+
+.card{
+  background-color:transparent;
+  height:600px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+#heading{
+  font-size:100px;
+  font-weight:bolder;
+  color:purple;
+
+}
+
+.squad{
+  color:gold;
+}
+
+.next{
+   width:210px;
+   height:40px;
+   border-radius:12px;
+   color:white;
+   background-color:purple;
+   font-size:20px;
+
+   display:flex;
+   align-items:center;
+   justify-content:center;
+
+
+}
+.next:hover{
+  background-color:black;
+  border:1px solid white;
+
+}
+.button-next{
+  text-decoration:none;
+}
+
+.fa-angle-double-right{
+    animation:  icon 5s ease infinite;
+}
+@keyframes icon {
+    25%{
+        transform: translateX(-1.0rem);
+    }
+    50%{
+        transform: translateX(-1.0rem);
+    }
+
+}
+
+
+.navbar-light{
+  background-color:black !important;
+
+}
+nav .navbar-brand{
+   font-size:40px;
+   color:gold !important;
+   margin-left:40%;
+   margin-right:25%;
+}
+nav .navbar-brand:hover{
+
+   color:white !important;
+
+}
+
+nav .navbar-nav li a{
+   color:white !important;
+   font-size:20px;
+}
+nav .navbar-nav li a:hover{
+   color:gold !important;
+   text-decoration:underline;
+
+}
+
+.create-hero{
+
+    background-color:black;
+    height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+#createhero-btn{
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:black;
+
+}
+.createhero-btn{
+  border-radius:12px;
+  width:210px;
+  height:40px;
+  color:gold;
+  background-color:black;
+  border:2px solid white;
+   margin-bottom:52.5%;
+
+}
+.createsquad-btn{
+  border-radius:12px;
+  width:210px;
+  height:40px;
+  color:gold;
+  background-color:black;
+  border:2px solid white;
+  margin-bottom:52.5%;
+  margin-left:2%;
+
+}
+img{
+ width:80%;
+ image-rendering: auto;
+ image-rendering: crisp-edges;
+ image-rendering: pixelated;
+ image-rendering: -webkit-optimize-contrast;
+ -ms-interpolation-mode: nearest-neighbor;
+
+   /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+   image-rendering: -webkit-optimize-contrast;
+
+}
+

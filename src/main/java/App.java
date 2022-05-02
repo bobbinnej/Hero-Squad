@@ -9,8 +9,14 @@ public class App {
       get("/", (request, response)->{
           Map<String, Object>model=new HashMap<String, Object>();
           return new ModelAndView(model, "index.hbs");
-              }, new HandlebarsTemplateEngine()
-              );
+              }, new HandlebarsTemplateEngine());
+
+      get("/landing-page", (request, respond)->{
+          Map<String, Object>model=new HashMap<>();
+          return new ModelAndView(model, "landing-page.hbs");
+              }, new HandlebarsTemplateEngine() );
+
+
     }
 
 }
