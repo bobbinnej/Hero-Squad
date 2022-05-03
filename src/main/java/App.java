@@ -3,6 +3,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 import models.Hero;
+import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -59,7 +60,22 @@ public class App {
               return new ModelAndView(model,"hero-details.hbs");
           }, new HandlebarsTemplateEngine());
 
+          get("/squad-form",(request, respond)->{
+              Map<String, Object>model=new HashMap<>();
+              return new ModelAndView(model,"squad-form.hbs");
+          }, new HandlebarsTemplateEngine());
 
+          get("/squad", (request,respond)->{
+
+              Map<String, Object> model = new HashMap<>();
+              ArrayList<Squad> squads = Squad.getInstances();
+              model.put("squads",squads);
+              ArrayList<Hero> members = Hero.getAllInstances();
+              model.put("heroes",members);
+              Squad newSquad = Squad.findBySquadId(1);
+              model.put("allSquadMembers", newSquad.getSquadMembers());
+              return new ModelAndView(model, "squad.hbs");
+          }, new HandlebarsTemplateEngine());
     }
 
 }
