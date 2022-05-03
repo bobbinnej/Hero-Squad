@@ -182,7 +182,7 @@ input::placeholder {
    background-color:black;
    color:purple;
    border:2px solid purple;
-   padding-left:6%;
+
 }
 .herosubmit-btn:hover{
     background-color:grey;
@@ -264,7 +264,33 @@ input::placeholder {
   background-color:brown;
 
 }
+.details-content{
+   background-color:white;
+}
+.hero-details h3{
 
+  font-family: 'Rubik Glitch', cursive;
+  font-size:40px;
+  font-weight:bolder;
+  text-align:center;
+  margin-top:10%;
+  color:brown;
+
+
+}
+.back-tch{
+    border-radius:20px;
+    margin-bottom:5%;
+    background-color:black;
+    color:white;
+    font-family: 'Pacifico', cursive;
+    text-decoration:none;
+    text-align:center;
+
+    margin-left:45%;
+    margin-top:5%;
+
+}
 
 
 

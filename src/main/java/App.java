@@ -5,7 +5,10 @@ import java.util.HashMap;
 import models.Hero;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
+
+
 import static spark.Spark.*;
+import static spark.Spark.post;
 public class App {
     public static void main(String[] args) {
       staticFileLocation("/public");
@@ -33,20 +36,28 @@ public class App {
           return new ModelAndView(model, "hero.hbs");
       },  new HandlebarsTemplateEngine());
 
-      post("/new/hero",(request,respond)->{
-          Map<String,Object>model=new HashMap<>();
-          Integer id=Integer.parseInt(request.queryParams("age"));
-          String name=request.queryParams("name");
-          Integer age=Integer.parseInt(request.queryParams("age"));
-          String power=request.queryParams("power");
-          String weakness=request.queryParams("weakness");
+        post("/new/hero",(request, respond) ->{
+            Map<String, Object> model = new HashMap<>();
 
-          Hero newHero=new Hero(id,name,age,power,weakness);
-          request.session().attribute("myHeroes",name);
-          model.put("myHeroes",request.session().attribute("myHeroes"));
-          model.put("myHeroes",1);
-          return new ModelAndView(model,"success.hbs");
-      },  new HandlebarsTemplateEngine());
+            String name = request.queryParams("name");
+            Integer age = Integer.parseInt(request.queryParams("age"));
+            String power = request.queryParams("power");
+            String weakness = request.queryParams("weakness");
+
+            Hero newHero = new Hero(name,age,power,weakness);
+            request.session().attribute("item",name);
+            model.put("item",request.session().attribute("item"));
+            model.put("newHero",newHero);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+          get("/new/:id",(request, respond)->{
+              Map<String,Object>model= new HashMap<>();
+              int idOfHero = Integer.parseInt(request.params(":id"));
+              Hero foundHero = Hero.findById(idOfHero);
+              model.put("hero",foundHero);
+              return new ModelAndView(model,"hero-details.hbs");
+          }, new HandlebarsTemplateEngine());
 
 
     }
