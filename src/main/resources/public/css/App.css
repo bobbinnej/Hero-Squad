@@ -291,6 +291,65 @@ input::placeholder {
     margin-top:5%;
 
 }
+.squadButton{
+  font-family: 'Rubik Wet Paint', cursive;
+  font-size:30px;
+  font-weight:bold;
+  border-radius:20px;
+  border:2px solid white;
+  width:600px;
+  color:yellow;
+  background:black;
+  text-decoration:none;
+  margin-bottom:10%;
+
+}
+.squadButton:hover{
+ color:purple;
+}
+.current-squad{
+
+     color:yellow;
+     background:black;
+     font-family: 'Rubik Wet Paint', cursive;
+     font-size:30px;
+     font-weight:bold;
+     height:40px;
+
+}
+.backButton{
+    font-family: 'Pacifico', cursive;
+    font-size:30px;
+    font-weight:bold;
+    border-radius:20px;
+    border:2px solid white;
+    width:600px;
+    color:purple;
+    background:black;
+    text-decoration:none;
+    margin-bottom:10%;
+}
+
+.backButton:hover{
+    color:white;
+}
+
+.bButton{
+    font-family: 'Pacifico', cursive;
+    font-size:30px;
+    font-weight:bold;
+    border-radius:20px;
+    border:2px solid white;
+    width:600px;
+    color:yellow;
+    background:black;
+    text-decoration:none;
+    margin-bottom:10%;
+}
+
+.bButton:hover{
+    color:white;
+}
 
 
 

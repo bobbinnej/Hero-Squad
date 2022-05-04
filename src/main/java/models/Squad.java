@@ -12,13 +12,13 @@ public class Squad {
     private static ArrayList<Squad> instances = new ArrayList<>();
 
 
-    public Squad(String squadName, int squadSize, String squadPurpose) {
-       this.squadName=squadName;
-       this.squadSize=squadSize;
-        this.squadPurpose=squadPurpose;
-        this.squadMembers = new ArrayList<>();
-        instances.add(this);
-        this.squadId = instances.size();
+    public Squad(String name, int size, String squadPurpose) {
+       squadName=name;
+       squadSize=size;
+       this.squadPurpose=squadPurpose;
+       this.squadMembers = new ArrayList<>();
+       instances.add(this);
+       this.squadId = instances.size();
 
     }
     public int getSquadId () {

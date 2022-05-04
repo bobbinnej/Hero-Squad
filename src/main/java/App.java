@@ -24,6 +24,8 @@ public class App {
       staticFileLocation("/public");
       Hero.setUpNewHero1();
       Hero.setUpNewHero2();
+      Squad.setUpNewSquad();
+      Squad.setUpNewSquad1();
       get("/", (request, response)->{
           Map<String, Object>model=new HashMap<String, Object>();
           return new ModelAndView(model, "index.hbs");
@@ -75,7 +77,6 @@ public class App {
           }, new HandlebarsTemplateEngine());
 
           get("/squad", (request,respond)->{
-
               Map<String, Object> model = new HashMap<>();
               ArrayList<Squad> squads = Squad.getInstances();
               model.put("squads",squads);
