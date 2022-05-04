@@ -1,0 +1,34 @@
+{{#partial "content"}}
+    <div class="hero-container">
+    <div class="new-hero">
+        <div class="hero-guides">
+            <a href="/hero-form"><button class="heroButton">Create an Awesome Super Hero</button></a><br>
+            <h3 class="current-heroes">Current Heroes</h3><br>
+            <a href="/landing-page"><button class="bButton">Back to Landing Page</button></a><br>
+
+        </div>
+    </div>
+
+            <div class="display-heroes">
+        {{#each hero}}
+            <div id="hero-item">
+                <p class="hero-item">Id: {{id}}</p>
+                <p class="hero-item">Name: {{name}}</p>
+                <p class="hero-item">Age: {{age}}</p>
+                <p class="hero-item">Super Power: {{power}}</p>
+                <p class="hero-item">Weakness: {{weakness}}</p><br>
+                <a href="new/{{id}}"><button class="hero-statistics">Hero Statistics</button></a>
+                <a href="/squad"><button class="hero-statistics">Add {{name}} to squad</button></a>
+
+            </div>
+
+        {{/each}}
+
+            </div>
+    </div>
+
+        
+
+{{/partial}}
+{{>layout.hbs}}
+

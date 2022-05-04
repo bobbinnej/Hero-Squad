@@ -7,7 +7,6 @@ import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
-
 import static spark.Spark.*;
 import static spark.Spark.post;
 public class App {
@@ -61,7 +60,7 @@ public class App {
             model.put("item",request.session().attribute("item"));
             model.put("newHero",newHero);
             return new ModelAndView(model, "success.hbs");
-        }, new HandlebarsTemplateEngine());
+        },  new HandlebarsTemplateEngine());
 
           get("/new/:id",(request, respond)->{
               Map<String,Object>model= new HashMap<>();
@@ -76,7 +75,7 @@ public class App {
               return new ModelAndView(model,"squad-form.hbs");
           }, new HandlebarsTemplateEngine());
 
-          get("/squad", (request,respond)->{
+          get("/new/squad", (request,respond)->{
               Map<String, Object> model = new HashMap<>();
               ArrayList<Squad> squads = Squad.getInstances();
               model.put("squads",squads);
@@ -84,7 +83,7 @@ public class App {
               model.put("heroes",members);
               Squad newSquad = Squad.findBySquadId(1);
               model.put("allSquadMembers", newSquad.getSquadMembers());
-              return new ModelAndView(model, "squad.hbs");
+              return new ModelAndView(model, "success.hbs");
           }, new HandlebarsTemplateEngine());
     }
 

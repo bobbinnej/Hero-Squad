@@ -1,0 +1,34 @@
+{{#partial "content"}}
+    <div class="hero-container">
+        <div class="new-hero">
+            <div class="hero-guides">
+                <a href="/squad-form"><button class="squadButton">Create a Squad</button></a><br>
+                <h3 class="current-squad">Current Squads</h3><br>
+                <a href="/landing-page"><button class="backButton">Back to Landing Page</button></a><br>
+
+            </div>
+        </div>
+
+        <div class="display-heroes">
+            {{#each squads}}
+                <div id="hero-item">
+                    <p class="hero-item">Id: {{squadId}}</p>
+                    <p class="hero-item">Squad Name: {{squadName}}</p>
+                    <p class="hero-item">Purpose: {{squadPurpose}}</p>
+                    <p class="hero-item">Maximum Members: {{squadSize}}</p>
+
+                    <a href="new/{{id}}"><button class="hero-statistics">Squad Statistics</button></a>
+                    <a href="/squad"><button class="hero-statistics">Add New Member</button></a>
+
+                </div>
+
+            {{/each}}
+
+        </div>
+    </div>
+
+
+
+{{/partial}}
+{{>layout.hbs}}
+

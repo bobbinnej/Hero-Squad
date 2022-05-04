@@ -350,6 +350,54 @@ input::placeholder {
 .bButton:hover{
     color:white;
 }
+.success-content{
+  background-color:purple;
+}
+.congrats{
+  font-family: 'Pacifico', cursive;
+  font-size:30px;
+  color:black;
+}
+.item{
+  font-family: 'Pacifico', cursive;
+  font-size:50px;
+  color:white;
+}
+.viewHero{
+    color:yellow;
+    background:black;
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size:30px;
+    font-weight:bold;
+    height:40px;
+    margin-bottom:5%;
+    border-radius:20px;
+      border:2px solid white;
+      width:600px;
+
+}
+.viewHero:hover{
+ color:white;
+
+}
+
+.viewSquad{
+    color:yellow;
+    background:black;
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size:30px;
+    font-weight:bold;
+    height:40px;
+    border-radius:20px;
+    border:2px solid white;
+    width:600px;
+    margin-bottom:30%;
+
+}
+.viewSquad:hover{
+ color:white;
+
+}
 
 
 

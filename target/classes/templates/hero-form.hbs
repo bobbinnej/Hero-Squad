@@ -1,0 +1,35 @@
+{{#partial "content"}}
+    <div class="hero-form">
+       <h1 class="heroform-title">Create your Awesome Super Hero</h1>
+    </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col">
+                  <div class="hero-form">
+                      <form action="/new/hero" method="post">
+                          <div class="mb-3">
+
+                              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hero's Name"><br>
+                              <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Hero's Age"><br>
+                              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hero's Special powers"><br>
+                              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hero's Weakness"><br>
+                          </div>
+
+                          <div class="submit-btn">
+                              <button type="submit" class="herosubmit-btn">Submit</button>
+                          </div>
+
+                      </form>
+
+                  </div>
+              </div>
+              <div class="col-md-2"></div>
+          </div>
+      </div>
+
+
+
+
+{{/partial}}
+{{>layout.hbs}}
